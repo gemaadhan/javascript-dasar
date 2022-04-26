@@ -1,41 +1,55 @@
-# JAVASCRIPT DASAR
-- [JAVASCRIPT DASAR](#javascript-dasar)
-  - [RECURSIVE](#recursive)
+# **JAVASCRIPT DASAR**
+- [**JAVASCRIPT DASAR**](#javascript-dasar)
+  - [**RECURSIVE**](#recursive)
     - [RECURSIVE](#recursive-1)
     - [RECURSIVE DENGAN BASELINE](#recursive-dengan-baseline)
     - [FUNGSI FAKTORIAL MENGGUNAKAN RECURSIVE](#fungsi-faktorial-menggunakan-recursive)
-    - [KEGUNAAN RECURSIVE](#kegunaan-recursive)
-  - [FUNCTION DECLARATION VS FUNCTION EXPRESSION](#function-declaration-vs-function-expression)
-    - [Penulisan Function Declaration :](#penulisan-function-declaration-)
-    - [Penulisan Function Expression :](#penulisan-function-expression-)
-    - [PERBEDAAN FUNCTION EXPRESSION DAN DECLARATION](#perbedaan-function-expression-dan-declaration)
-  - [ARRAY](#array)
-    - [KENAPA PAKAI ARRAY ?](#kenapa-pakai-array-)
-    - [MEMBUAT ARRAY](#membuat-array)
-    - [MENAMPILKAN ISI ARRAY](#menampilkan-isi-array)
-    - [ARRAY ADALAH OBJECT](#array-adalah-object)
-    - [ARRAY BISA DIISI FUNGSI DAN ARRAY LAIN](#array-bisa-diisi-fungsi-dan-array-lain)
-    - [JADI ARRAY ADALAH](#jadi-array-adalah)
-    - [MANIPULASI ARRAY](#manipulasi-array)
-      - [MENAMBAH ISI ARRAY](#menambah-isi-array)
-      - [MENGHAPUS ISI ARRAY](#menghapus-isi-array)
-      - [MENAMPILKAN ARRAY](#menampilkan-array)
-      - [METHOD : JOIN](#method--join)
-      - [METHOD : PUSH](#method--push)
-      - [METHOD : POP](#method--pop)
-      - [METHOD UNSHIFT DAN SHIFT](#method-unshift-dan-shift)
-      - [METHOD: SPLICE](#method-splice)
-      - [METHOD: SLICE](#method-slice)
+    - [APA KEGUNAAN RECURSIVE ?](#apa-kegunaan-recursive-)
+  - [**FUNCTION DECLARATION DAN FUNCTION EXPRESSION**](#function-declaration-dan-function-expression)
+    - [PENULISAN FUNCTION DECLARATION](#penulisan-function-declaration)
+    - [PENULISAN FUNCTION EXPRESSION](#penulisan-function-expression)
+    - [**PERBEDAAN FUNCTION EXPRESSION DAN FUNCTION DECLARATION**](#perbedaan-function-expression-dan-function-declaration)
+  - [**ARRAY**](#array)
+    - [**KENAPA MENGGUNAKAN ARRAY ?**](#kenapa-menggunakan-array-)
+    - [**MEMBUAT ARRAY**](#membuat-array)
+    - [**MENAMPILKAN ISI ARRAY**](#menampilkan-isi-array)
+    - [**ARRAY ADALAH OBJECT**](#array-adalah-object)
+    - [**ARRAY BISA DIISI DENGAN FUNGSI DAN ARRAY LAIN**](#array-bisa-diisi-dengan-fungsi-dan-array-lain)
+    - [**JADI ARRAY ADALAH**](#jadi-array-adalah)
+    - [**MANIPULASI ARRAY**](#manipulasi-array)
+      - [**MENAMBAH ISI ARRAY**](#menambah-isi-array)
+      - [**MENGHAPUS ISI ARRAY**](#menghapus-isi-array)
+      - [**MENAMPILKAN ARRAY**](#menampilkan-array)
+      - [**METHOD : JOIN**](#method--join)
+      - [**METHOD : PUSH**](#method--push)
+      - [**METHOD : POP**](#method--pop)
+      - [**METHOD UNSHIFT DAN SHIFT**](#method-unshift-dan-shift)
+      - [**METHOD: SPLICE**](#method-splice)
+      - [**METHOD: SLICE**](#method-slice)
       - [METHOD : FOREACH dan MAP dan SORT](#method--foreach-dan-map-dan-sort)
       - [METHOD : FOREACH](#method--foreach)
       - [METHOD : MAP](#method--map)
       - [METHOD : SORT](#method--sort)
       - [METHOD : FILTER](#method--filter)
       - [METHOD : FIND](#method--find)
+  - [OBJECT](#object)
+    - [KENAPA KITA MENGGUNAKAN OBJECT ?](#kenapa-kita-menggunakan-object-)
+    - [ANATOMI OBJECT](#anatomi-object)
+    - [PENGANTAR TENTANG OBJECT](#pengantar-tentang-object)
+    - [MEMBUAT OBJECT](#membuat-object)
+      - [**Literal**](#literal)
+      - [**Function Declaration**](#function-declaration)
+      - [**Constructor Function (keyword new)**](#constructor-function-keyword-new)
+      - [**Object.create()**](#objectcreate)
+    - [**KONSEP THIS**](#konsep-this)
+    - [**KONSEP THIS PADA 3 CARA PEMBUATAN OBJECT**](#konsep-this-pada-3-cara-pembuatan-object)
+      - [**THIS PADA FUNCTION DECLARATION**](#this-pada-function-declaration)
+      - [**THIS PADA OBJECT LITERAL**](#this-pada-object-literal)
+      - [**THIS PADA CONSTRUCTOR**](#this-pada-constructor)
 
-## RECURSIVE
+## **RECURSIVE**
 
-Merupakan Fungsi yang memanggil dirinya sendiri. Sebenarnya kita bisa memanfaatkan for untuk looping
+**Recursive** merupakan fungsi yang memanggil dirinya sendiri. Sebenarnya kita bisa memanfaatkan for untuk melakukan looping.
 
 ```js
 for (var i = 10; i >= 1; i--) {
@@ -47,7 +61,7 @@ for (var i = 10; i >= 1; i--) {
 
 ### RECURSIVE 
 
-Namun kita bisa juga membuat looping menggunakan **recursive**
+Untuk mendapatkan output yang sama seperti contoh sebelumnya, bisa juga menggunakan **Recursive**
 
 ```js
 function tampilAngka(n) {
@@ -62,7 +76,7 @@ tampilAngka(10);
 
 ### RECURSIVE DENGAN BASELINE
 
-dari contoh sebelumnya fungsi akan berjalan tanpa henti sehingga harus ada kondisi berhenti, kondisi ini di sebut Base Case.
+Dari contoh sebelumnya fungsi **Recursive** akan berjalan tanpa henti, sehingga harus ada suatu kondisi yang membuat *looping* berhenti, kondisi ini di sebut *Base* *Case*.
 
 ```js
 function tampilAngka(n) {
@@ -70,6 +84,7 @@ function tampilAngka(n) {
   if (n === 0) {
     return;
   }
+
   console.log(n);
   return tampilAngka(n - 1);
 }
@@ -80,7 +95,7 @@ tampilAngka(10);
 ![recursive_img_recursive_with_baseline](images/recursive_img_recursive_with_baseline.png)
 
 ### FUNGSI FAKTORIAL MENGGUNAKAN RECURSIVE
-
+**Recursive** bisa digunakan juga untuk membuat fungsi faktorial
 ```js
 function faktorial(n) {
   if (n === 0) return 1;
@@ -90,7 +105,7 @@ function faktorial(n) {
 console.log(faktorial(5));
 ```
 
- berikut adalah proses yang dilakukan fungsi faktorial di atas
+ berikut penjelasan fungsi **Recursive** faktorial di atas
  * faktorial (5)
  * 5 * faktorial (4)
  * 5 * (4 * faktorial (3))
@@ -104,20 +119,23 @@ console.log(faktorial(5));
 
 ![recursive_img_faktorial](images/recursive_img_faktorial.png)
 
->Semua Looping bisa dibuat recursive tapi tidak sebaliknya
+>Semua Looping bisa dibuat **Recursive** tapi tidak sebaliknya.
 
-### KEGUNAAN RECURSIVE
+### APA KEGUNAAN RECURSIVE ?
 
 1. Menggantikan looping
 2. Fibonancci
 3. Pencarian dan penelurusan pada struktur data list dan tree
 4. untuk bahasa pemograman yang tidak memiliki pengulangan
 
-## FUNCTION DECLARATION VS FUNCTION EXPRESSION
+## **FUNCTION DECLARATION DAN FUNCTION EXPRESSION**
+Di dalam javascript terdapat dua cara pembuatan fungsi yaitu 
+1) **Function** **Declaration**
+2) **Function** **Expression**
+   
+### PENULISAN FUNCTION DECLARATION 
 
-### Penulisan Function Declaration :
-
->function identifier (ParameterList <sub>opt</sub>) {FunctionBody}
+>*function* *identifier* (*ParameterList* <sub>*opt*</sub>) {*FunctionBody*}
 
 ```js
 function tampilPesanDec(nama) {
@@ -125,9 +143,9 @@ function tampilPesanDec(nama) {
 }
 ```
 
-### Penulisan Function Expression : 
+### PENULISAN FUNCTION EXPRESSION 
 
->function identifier <sub>opt</sub> (ParameterList <sub>opt</sub>) {FunctionBody}
+>*function* *identifier* <sub>*opt*</sub> (*ParameterList* <sub>*opt*</sub>) {*FunctionBody*}
 
 ```js
 function tampilPesanExp(nama) {
@@ -139,7 +157,7 @@ function (nama) {
   }
 ```
 
-namun penulisan Function Expression di atas baru bisa dikatakan function expression ketika disimpan di dalam sebuah expresi
+Penulisan **Function** **Expression** di atas baru bisa dikatakan sebagai **Function Expression** ketika disimpan di dalam sebuah ekpresi, seperti pada contoh berikut
 
 ```js
 var tampilPesanExp = function (nama) {
@@ -147,21 +165,21 @@ var tampilPesanExp = function (nama) {
   }
 ```
 
-### PERBEDAAN FUNCTION EXPRESSION DAN DECLARATION
+### **PERBEDAAN FUNCTION EXPRESSION DAN FUNCTION DECLARATION**
 
 | FUNCTION DECLARATION | FUNCTION EXPRESSION |
 | ------ | ------- |
-| lebih fleksibel, karena bisa tulis dimanapun, bisa ditulis sebelum atau sesudah pemanggilan function. ini terjadi karena di dalam javascript ada konsep yang namanya HOISTING yaitu deklarasi sebuah function pasti disimpan terlebih dahulu di dalam memory.   |  Harus didefinisikan dulu sebelum dipanggil|
-| cenderung lebih mudah dipahami pemula|lebih powerful, kita bisa membuat function expression sebagai closure, atau sebagai argumen untuk function lain.|
-| | bisa dibuat sebagai IIFE (Immediately Invoked Function Expression) |
+| Lebih fleksibel, karena bisa tulis dimanapun, bisa ditulis sebelum atau sesudah pemanggilan fungsi. ini terjadi karena di dalam javascript ada konsep yang disebut *Hoisting* yaitu deklarasi sebuah fungsi pasti disimpan terlebih dahulu di dalam memori.   |  Harus didefinisikan dulu sebelum dipanggil|
+| Cenderung lebih mudah dipahami pemula|lebih *powerful*, kita bisa membuat **Function Expression** sebagai *closure*, atau sebagai argumen untuk fungsi lain.|
+| | bisa dibuat sebagai IIFE (*Immediately* *Invoked* *Function* *Expression*) |
 
-## ARRAY
+## **ARRAY**
 
-array ada banyak di bahasa lain, walaupun konsep nya berbeda (ada yang menjadikan sebagai tipe data ada yang menjadikan jadi struktur data)
+**Array** terdapat juga di bahasa lain, walaupun konsep nya berbeda (ada yang menjadikan **array** sebagai tipe data ada yang menjadikan **array** sebagai struktur data).
 
-wikipedia : array adalah tipe data yang digunakan untuk mendeskripsikan kumpulan element (nilai atau variabel) yang tiap tiap elemennya memiliki index
+Menurut wikipedia **array** adalah tipe data yang digunakan untuk mendeskripsikan kumpulan elemen (nilai atau variabel) yang tiap tiap elemennya memiliki *index*
 
-wpu : array adalah variabel yang lebih sakti karena bisa menampung lebih dari satu nilai
+Menurut Pak Sandhika **array** adalah variabel yang lebih sakti karena bisa menampung lebih dari satu nilai
 
 jika menggunakan variabel kita hanya bisa menyimpan 1 nilai
 
@@ -170,36 +188,36 @@ var hari = "senin";
 var hari = "selasa"; // variabel hari akan diganti nilai nya jadi selasa
 ```
 
-sedangkan dengan array kita bisa menyimpan lebih dari 1 nilai 
+sedangkan dengan **array** kita bisa menyimpan nilai lebih dari 1 nilai 
 
 ```js
 var hari = ["senin", "selasa"];
 ```
 
-### KENAPA PAKAI ARRAY ?
-* untuk mempermudah pengelolaa nilai / value /data dalam penelusuran dan pencarian
+### **KENAPA MENGGUNAKAN ARRAY ?**
+* Untuk mempermudah pengelolaan nilai / *value* /data dalam penelusuran dan pencarian
 * manajemen memori
 
-### MEMBUAT ARRAY
+### **MEMBUAT ARRAY**
 
 ```js
 var binatang = [];
 binatang = ["kucing", "anjing"];
 ```
 
-### MENAMPILKAN ISI ARRAY
+### **MENAMPILKAN ISI ARRAY**
 
 ```js
 console.log(binatang[1]);
 ```
 
-### ARRAY ADALAH OBJECT
+### **ARRAY ADALAH OBJECT**
 
 ```js
 console.log(typeof binatang);
 ```
 
-### ARRAY BISA DIISI FUNGSI DAN ARRAY LAIN
+### **ARRAY BISA DIISI DENGAN FUNGSI DAN ARRAY LAIN**
 
 ```js
 var myFunc = function () {
@@ -209,18 +227,18 @@ var myFunc = function () {
 var myArr = ["teks", 2, false, myFunc, [4, 5, 6]];
 ```
 
-### JADI ARRAY ADALAH
+### **JADI ARRAY ADALAH**
 
 * variabel jamak yg punya banyak elemen dan diacu dengan nama yang sama
-* kumpulan pasangan key dan nilai
-* key adalah index dengan tipe integer dimulai dari 0
-* array pada javascript tipenya adalah OBJECT
-* Array pada javascript memiliki fungsi / method length untuk menghitung jumlah elemen dan ada method lainnya juga
-* Elemen pada Array boleh memiliki tipe data yang berbeda
+* kumpulan pasangan *key* dan *value*
+* *key* adalah *index* dengan tipe integer yang dimulai dari 0
+* **Array** pada javascript tipenya adalah *Object*
+* **Array** pada javascript memiliki fungsi / *method* *length* untuk menghitung jumlah elemen dan juga memiliki *method* yang lain
+* Elemen pada **array** boleh memiliki tipe data yang berbeda
 
-### MANIPULASI ARRAY
+### **MANIPULASI ARRAY**
 
-#### MENAMBAH ISI ARRAY
+#### **MENAMBAH ISI ARRAY**
 
 ```js
 var arr = [];
@@ -234,7 +252,7 @@ arr[3] = "Nsang";
 console.log(arr); //maka akan tampil dalam bentuk object
 ```
 
-#### MENGHAPUS ISI ARRAY
+#### **MENGHAPUS ISI ARRAY**
 
 ```js
 var arr = ["Aung", "La", "Nsang"];
@@ -242,7 +260,7 @@ arr[1] = undefined;
 console.log(arr);
 ```
 
-#### MENAMPILKAN ARRAY
+#### **MENAMPILKAN ARRAY**
 
 ```js
 var arr = ["Aung", "La", "Nsang"];
@@ -252,8 +270,8 @@ for (var i = 0; i < arr.length; i++) {
 }
 ```
 
-#### METHOD : JOIN
-method join, menggabungkan isi array dan mengubah menjadi string
+#### **METHOD : JOIN**
+*method* *join*, menggabungkan isi **array** dan mengubah menjadi *string*
 
 ```js
 var arr = ["Aung", "La", "Nsang"];
@@ -261,8 +279,8 @@ console.log(arr.join());
 console.log(arr.join("-"));
 ```
 
-#### METHOD : PUSH
-digunakan untuk menambah element array di akhir array(push);
+#### **METHOD : PUSH**
+*Push* digunakan untuk menambah elemen **array** di akhir **array**;
 
 ```js
 var arr = ["Aung", "La", "Nsang"];
@@ -270,16 +288,16 @@ arr.push("Doddy","steven","senna");
 console.log(arr.join());
 ```
 
-#### METHOD : POP
-digunakan untuk menghilangkan element terakhir dari sebuah array
+#### **METHOD : POP**
+*POP* digunakan untuk menghilangkan elemen terakhir dari sebuah **array**
 
 ```js
 arr.pop();
 console.log(arr.join("=="));
 ```
 
-#### METHOD UNSHIFT DAN SHIFT
-sama seperti POP dan PUSH hanya saja dia bekerja di awal array
+#### **METHOD UNSHIFT DAN SHIFT**
+*Method* ini sama seperti *Pop* dan *Push*, hanya saja dia bekerja di awal **array**
 
 ```js
 arr.unshift("mark", "jugenberg");
@@ -289,9 +307,9 @@ arr.shift();
 console.log(arr.join("="));
 ```
 
-#### METHOD: SPLICE
-digunakan untuk menyisipkan elemen
->splice(indexAwal, mauDiHapusBerapa, Elemenbaru1, Elemenbaru2)
+#### **METHOD: SPLICE**
+*Splice* digunakan untuk menyisipkan elemen
+>*splice*(*indexAwal*, *mauDiHapusBerapa*, *Elemenbaru1*, *Elemenbaru2*)
 
 ```js
 var arr = ["Aung", "La", "Nsang"];
@@ -299,7 +317,7 @@ arr.splice(1, 0, "Vitaly", "Bigdash");
 console.log(arr.join(","));
 ```
 
-#### METHOD: SLICE
+#### **METHOD: SLICE**
 digunakan untuk mengambil beberapa bagian array untuk menjadi bagian baru
 >slice(indexawal,indexakhir)
 
@@ -449,4 +467,272 @@ var angka2 = angka.find(function (x) {
 console.log(angka2);
 ```
 ![find_img_find](images/find_img_find.png)
+
+>Pengelolaan Penumpang *Postponed*
+
+## OBJECT 
+array adalah kumpulan nilai yang memiliki *index*, array di dalam javascript adalah object, jadi di javascript tidak ada tipe data yang namanya array, tapi adanya object. 
+
+sedangkan object adalah kumpuluan nilai yang memiliki *nama*. object adalah array yang lebih sakti.
+
+>Konsep Object juga ada di bahasa pemograman lain
+>* PHP : Associative Array
+>* Python : Dictionaries 
+>* Java : Hash Maps
+>* C : Hash Table
+>* Ruby & Perl : Hashes
+
+### KENAPA KITA MENGGUNAKAN OBJECT ?
+Misalkan kita mau bikin kumpulan data yang menjelaskan mahasiswa
+```js
+var namaMhs = 'Mc Gregor';
+var umurMhs = 31;
+var lulus = true;
+var IPSemester = [2.9,3.1,3.25,2.88,3.04];
+function IPKumulatif(IPSemester){
+  var total = 0;
+  for (var i=0; i< IPSemester.length; i++){
+    total += IPSemester[i];
+  }
+  return total/IPSemester.length;
+};
+```
+bagaimana kalau ada mahasiswa yang ke dua ? artinya kita harus bikin variable baru
+```js
+var namamhs1 = "khabib Nurjatmiko"
+var umurMhs2 = 30;
+var lulus2 = true;
+...
+```
+dan seterusnya. 
+
+ini bisa kita perbaiki jika kita menggunakan array 
+
+```js
+var mahasiswa = ['Khabib Nurjatmiko', true, [2.9,3.1,3.25,2.88,3.04];
+// element 1 = Nama 
+// element 2 = lulus apa ndak
+// element 3 = kumpulan IP Semester
+
+// untuk menghitung IPK, kita tetap harus membuat fungsi nya terpisah
+function IPKumulatif(IPSemester){
+  var total = 0;
+  for (var i=0; i< IPSemester.length; i++){
+    total += IPSemester[i];
+  }
+  return total/IPSemester.length;
+};
+IPKumulatif(mahasiswa[2]);
+```
+
+Dan... Kalau kita perbaiki menggunakan object
+```js
+var mahasiswa = {
+  nama : 'Khabib Nurdjamiko',
+  lulus : true,
+  IPSemester : [2.9, 3.1, 3.25, 2.88, 3.04];
+  IPKumulatif : function(){
+      var total = 0;
+      var ips = this.IPSemester;
+      for (var i=0; i< ips.length; i++){
+      total += ips[i];
+    }
+    return total/ips.length;
+  }
+}
+
+mahasiswa.IPKumulatif();
+
+```
+
+### ANATOMI OBJECT
+
+object memiliki properti dan method
+![object_img_anatomi](images/object_img_anatomi.png)
+
+### PENGANTAR TENTANG OBJECT
+kita bisa membuat object kosong
+```js
+var fighter = {};
+```
+kemudian kita bisa isikan property nya melalui console (hanya di simpan sementara di memory)
+![object_img_console](images/object_img_console.png)
+
+atau kita bisa membuat langsung di kode nya
+
+```js
+var fighter = {
+  name: "khabib nurdjamiko",
+  age: 32,
+  win: [true, true, true, true, true],
+
+  // kita bisa membuat object lagi di dalam object
+  team: {
+    coach: "Javier Mendez",
+    friend: "Islam Makhachev",
+  },
+};
+```
+![object_img_console_2](images/object_img_console_2.png)
+
+### MEMBUAT OBJECT
+ada 4 cara membuat object
+
+#### **Literal**
+   ```js
+  var fighter1 = {
+  name: "khabib nurdjamiko",
+  age: 32,
+  win: [true, true, true, true, true],
+  team: {
+    coach: "Javier Mendez",
+    friend: "Islam Makhachev",
+  },
+};
+
+var fighter2 = {
+  name: "conor mcgregor",
+  age: 32,
+  win: [true, true, true, false, true],
+  team: {
+    coach: "John Kavanagh",
+    friend: "Artem Lobov",
+  },
+};
+```
+dengan cara ini kita perlu membuat ulang property kalau mau bikin object baru.
+
+#### **Function Declaration**
+```js
+function makeObjFighter(name, age, win, team) {
+  var fighter = [];
+  fighter.name = name;
+  fighter.age = age;
+  fighter.win = win;
+  fighter.team = team;
+  return fighter;
+}
+
+var fighter1 = makeObjFighter(
+  "khabib nurdjamiko",
+  32,
+  [true, true, true, true, true],
+  {
+    coach: "Javier Mendez",
+    friend: "Islam Makhachev",
+  }
+);
+
+var fighter2 = makeObjFighter(
+  "conor mcgregor",
+  32,
+  [true, true, true, false, true],
+  {
+    coach: "John Kavanagh",
+    friend: "Artem Lobov",
+  }
+);
+```
+membuat object dengan function declaration kita hanya perlu memanggil fungsi dan mengisikan argumentnya
+
+#### **Constructor Function (keyword new)**
+adalah function yang khusus untuk membuat object. cara ini paling sering dipakai. pembuatan nama fungsi nya biasanya di awalai dengan huruf besar. 
+
+```js
+function Fighter(name, age, win, team) {
+  // pada constructor, kita tak perlu mendefinisikan variabel dengan var
+  this.name = name;
+  this.age = age;
+  this.win = win;
+  this.team = team;
+  // dan tidak perlu ada return
+}
+
+// untuk memanggil
+var fighter1 = new Fighter(
+  "conor mcgregor",
+  32,
+  [true, true, true, false, true],
+  {
+    coach: "John Kavanagh",
+    friend: "Artem Lobov",
+  }
+);
+```
+
+untuk membuat object dengan konstruktor
+1) Convention Penamaan Fungsi menggukana awalan huruf besar
+1) tidak perlu ada var
+2) tidak perlu di return
+3) pemanggilannya harus menggunakan keyword ***new***
+
+
+####  **Object.create()**
+belum dibahas disini
+
+### **KONSEP THIS**
+kita harus paham membuat dan memanggil object dengan cara cara sebelumnya(function declaration, literal, constructor). ketika kita menggunakan cara pembuatan object yang berbeda, kita sebenarnya berada pada context atau keadaan yang berbeda. 
+
+>this adalah keyword spesial yang otomatis didefinisikan pada tiap object.
+
+```js
+console.log(this);
+```
+this pada context ini adalah windows atau object window
+![this_img_window](images/this_img_window.png)
+
+sehingga kita bisa tulis begini
+```js
+var a = 10;
+console.log(window.a);
+console.log(this.a);
+```
+![this_img_window_variabel](images/this_img_window_variabel.png)
+
+### **KONSEP THIS PADA 3 CARA PEMBUATAN OBJECT**
+#### **THIS PADA FUNCTION DECLARATION**
+```js
+function halo() {
+  console.log(this);
+  console.log("halo");
+}
+
+halo();
+// this mengembalikan object global / object window
+// sehingga kita juga bisa tulis begini
+this.halo();
+```
+
+![this_img_function_declaration](images/this_img_function_declaration.png)
+
+#### **THIS PADA OBJECT LITERAL**
+```js
+var obj = {
+  name: "ini object literal",
+};
+obj.halo = function () {
+  console.log(this);
+  console.log("halo");
+};
+
+obj.halo();
+// this mengembalikan object yang bersangkutan
+```
+
+![this_img_object_lateral](images/this_img_object_lateral.png)
+
+#### **THIS PADA CONSTRUCTOR**
+```js
+function Halo(name) {
+  this.name = name;
+  console.log(this);
+  console.log("halo");
+}
+
+var obj1 = new Halo("aku adalah object1");
+var obj2 = new Halo("aku adalah object2");
+//this mengembalikan object yang baru dibuat
+
+```
+![this_img_constructor](images/this_img_constructor.png)
 
