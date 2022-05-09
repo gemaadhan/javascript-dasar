@@ -32,6 +32,7 @@
       - [METHOD : SORT](#method--sort)
       - [METHOD : FILTER](#method--filter)
       - [METHOD : FIND](#method--find)
+    - [LATIHAN ARRAY](#latihan-array)
   - [OBJECT](#object)
     - [KENAPA KITA MENGGUNAKAN OBJECT ?](#kenapa-kita-menggunakan-object-)
     - [ANATOMI OBJECT](#anatomi-object)
@@ -49,7 +50,7 @@
 
 ## **RECURSIVE**
 
-**Recursive** merupakan fungsi yang memanggil dirinya sendiri. Sebenarnya kita bisa memanfaatkan for untuk melakukan looping.
+**Recursive** merupakan fungsi yang memanggil dirinya sendiri. Sebenarnya kita bisa memanfaatkan *for* untuk melakukan *looping*.
 
 ```js
 for (var i = 10; i >= 1; i--) {
@@ -61,7 +62,7 @@ for (var i = 10; i >= 1; i--) {
 
 ### RECURSIVE 
 
-Untuk mendapatkan output yang sama seperti contoh sebelumnya, bisa juga menggunakan **Recursive**
+Untuk mendapatkan *output* yang sama seperti contoh sebelumnya, bisa juga menggunakan **Recursive**
 
 ```js
 function tampilAngka(n) {
@@ -95,7 +96,9 @@ tampilAngka(10);
 ![recursive_img_recursive_with_baseline](images/recursive_img_recursive_with_baseline.png)
 
 ### FUNGSI FAKTORIAL MENGGUNAKAN RECURSIVE
-**Recursive** bisa digunakan juga untuk membuat fungsi faktorial
+
+**Recursive** biasa digunakan untuk membuat fungsi faktorial
+
 ```js
 function faktorial(n) {
   if (n === 0) return 1;
@@ -119,17 +122,19 @@ console.log(faktorial(5));
 
 ![recursive_img_faktorial](images/recursive_img_faktorial.png)
 
->Semua Looping bisa dibuat **Recursive** tapi tidak sebaliknya.
+>Semua *looping* bisa dibuat **Recursive** tapi tidak sebaliknya.
 
 ### APA KEGUNAAN RECURSIVE ?
 
-1. Menggantikan looping
+1. Menggantikan *looping*
 2. Fibonancci
-3. Pencarian dan penelurusan pada struktur data list dan tree
+3. Pencarian dan penelurusan pada struktur data *list* dan *tree*
 4. untuk bahasa pemograman yang tidak memiliki pengulangan
 
 ## **FUNCTION DECLARATION DAN FUNCTION EXPRESSION**
-Di dalam javascript terdapat dua cara pembuatan fungsi yaitu 
+
+Di dalam *javascript* terdapat dua cara pembuatan fungsi yaitu 
+
 1) **Function** **Declaration**
 2) **Function** **Expression**
    
@@ -177,9 +182,9 @@ var tampilPesanExp = function (nama) {
 
 **Array** terdapat juga di bahasa lain, walaupun konsep nya berbeda (ada yang menjadikan **array** sebagai tipe data ada yang menjadikan **array** sebagai struktur data).
 
-Menurut wikipedia **array** adalah tipe data yang digunakan untuk mendeskripsikan kumpulan elemen (nilai atau variabel) yang tiap tiap elemennya memiliki *index*
+Menurut wikipedia **array** adalah tipe data yang digunakan untuk mendeskripsikan kumpulan elemen (nilai atau variabel) yang tiap tiap elemennya memiliki *index*.
 
-Menurut Pak Sandhika **array** adalah variabel yang lebih sakti karena bisa menampung lebih dari satu nilai
+Menurut Pak Sandhika **array** adalah variabel yang lebih sakti karena bisa menampung lebih dari satu nilai.
 
 jika menggunakan variabel kita hanya bisa menyimpan 1 nilai
 
@@ -229,9 +234,9 @@ var myArr = ["teks", 2, false, myFunc, [4, 5, 6]];
 
 ### **JADI ARRAY ADALAH**
 
-* variabel jamak yg punya banyak elemen dan diacu dengan nama yang sama
-* kumpulan pasangan *key* dan *value*
-* *key* adalah *index* dengan tipe integer yang dimulai dari 0
+* Variabel jamak yg punya banyak elemen dan diacu dengan nama yang sama
+* Kumpulan pasangan *key* dan *value*
+* *Key* adalah *index* dengan tipe integer yang dimulai dari 0
 * **Array** pada javascript tipenya adalah *Object*
 * **Array** pada javascript memiliki fungsi / *method* *length* untuk menghitung jumlah elemen dan juga memiliki *method* yang lain
 * Elemen pada **array** boleh memiliki tipe data yang berbeda
@@ -469,6 +474,9 @@ console.log(angka2);
 ![find_img_find](images/find_img_find.png)
 
 >Pengelolaan Penumpang *Postponed*
+
+### LATIHAN ARRAY
+
 
 ## OBJECT 
 array adalah kumpulan nilai yang memiliki *index*, array di dalam javascript adalah object, jadi di javascript tidak ada tipe data yang namanya array, tapi adanya object. 

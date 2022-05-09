@@ -1,10 +1,15 @@
-var obj = {
-  name: "ini object literal",
-};
-obj.halo = function () {
-  console.log(this);
-  console.log("halo");
-};
+var penumpang = [];
 
-obj.halo();
-// this mengembalikan object yang bersangkutan
+var tambahPenumpang = function (namaPenumpang, arrayPenumpang) {
+  if (arrayPenumpang.length === 0) {
+    arrayPenumpang.push(namaPenumpang);
+  } else {
+    arrayPenumpang.forEach(function (e, i) {
+      if (e === undefined) {
+        arrayPenumpang[i] = namaPenumpang;
+        return;
+      }
+    });
+  }
+  return arrayPenumpang;
+};
